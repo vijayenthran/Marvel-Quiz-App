@@ -1,0 +1,20 @@
+* {
+	box-sizing: border-box;
+}
+
+
+/* Mobile defaults */
+.align-block, .form-align, .show-Result, h1{
+	width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+
+	.align-block, .form-align, .show-Result {
+		width: 60%   
+	}
+
+	h1{
+		width: 50%;
+	}
+}
