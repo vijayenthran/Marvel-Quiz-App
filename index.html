@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Marvel Quiz App</title>
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Allan|Bungee|Faster+One|Holtwood+One+SC|Permanent+Marker|Racing+Sans+One" rel="stylesheet">
+</head>
+<body>
+  <main class='container js-container' role='main'>
+    <section class='quiz-Start js-quiz-Start align-block' role='region'>
+      <header role='banner'><h1>Marvel Quiz</h1></header>
+      <article class='instructions js-instructions' role='article'>
+        <div class='image'>
+          <img src='https://cdn-ssl.img.shop.marvel.com/content/ds/skyway/2014/category/full/fwb_Avengers_20140422.png' alt='All Avengers hero Cartoonic Picture, Heros are showing their Cool Moves in the picture'>
+        </div>
+        <h2>Instructions</h2>
+        <ol>
+          <li>There are total 10 questions for this quiz.</li>
+          <li>You will get one point ,if the answer is correct.</li>
+          <li>Once the Submit button is clicked. Re-selection of Answer is not possible.</li>
+          <li>When you are question 10, Click "final-Score" button to get the total Score.</li>
+          <li>If you want to take the quiz again. Select the "START AGAIN" Button.</li>
+          <li>Click "Start Quiz" to Begin quiz.</li>
+        </ol>
+      </article>
+      <div class='start-Quiz'>
+        <input type="button" value="start-Quiz" class='start-Quiz-Button js-start-Quiz-Button'>
+      </div>
+    </section>
+    <form class='form js-form' role='form'>
+      <fieldset></fieldset>
+    </form> 
+    <section class='score js-score remove-display align-block' role='region'></section>
+    <section class='show-Result js-show-Result remove-display' role='region'></section>
+  </main>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="index.js"></script>
+</body>
+</html>
