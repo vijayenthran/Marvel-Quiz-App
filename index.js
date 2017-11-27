@@ -96,7 +96,7 @@ const quizQuestions = {
   }
 };
 
-// This is used to assign a random number to the pickQuestion variable so that a question can be picked every time the quiz is run.
+// This is used to assign a random number to the pickQuestion variable so that a random question can be picked every time the quiz is run.
 function generateRandomNumbers(){
   let generateRandom = Math.ceil(Math.random()*arr.length);
   let number = arr[generateRandom-1];
