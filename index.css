@@ -139,6 +139,7 @@ h1 {
  text-align: center;
 }
 
+/*Span is an inline element, But how does marigin works there. Its said that marigin wont work for inline elements*/
 .score-Content span {
   font-size: 1.2em;
   font-family: 'Holtwood One SC', serif;
