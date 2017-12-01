@@ -8,6 +8,10 @@
 	width: 100%;
 }
 
+.popup-content{
+	width: 90%;
+}
+
 @media only screen and (min-width: 640px) {
 
 	.align-block, .form-align, .show-Result {
@@ -16,5 +20,9 @@
 
 	h1{
 		width: 50%;
+	}
+
+	.popup-content{
+		width: 40%
 	}
 }
