@@ -174,8 +174,6 @@ function handleLastCondition(){
     let nextButton = $('form').find('.js-next');
     let submitButton = $('form').find('.js-submit');
     nextButton.attr('value', 'Final-Score');
-    // submitButton.attr('disabled', true);
-    // nextButton.attr('disabled', false);
     nextButton.addClass('displayResult');
     showResult();
     return;
@@ -184,17 +182,47 @@ function handleLastCondition(){
   }
 }
 
+function removeFeedbackView(){
+  let feedBackSelector = $('.js-feed-back');
+  feedBackSelector.find('p').remove();
+}
+
+
 function correctAnswerView(){
   let value= getCheckedVal();
+  let feedBackSelector = $('.js-feed-back');
   $(`input[value='${value}']`).closest("p").addClass('correct-Answer');
+  const element = 
+  `
+  <p><span>You Got it Right !!! Kudos<span></p>
+  <p>Correct Anwer is: <span>"${value}"</span></p>
+  `;
+  feedBackSelector.append(element);
+  feedBackSelector.removeClass('remove-display');
   return ;
 }
 
 function wrongAnswerView(){
   let value= getCheckedVal();
   let correctAnswer = quizQuestions[pickQuestion].answer;
+  let feedBackSelector = $('.js-feed-back');
   $(`input[value='${value}']`).closest("p").addClass('wrong-Answer');
   $(`input[value='${correctAnswer}']`).closest("p").addClass('correct-Answer');
+  const element = 
+  `
+  <p><span>Sorry, the Answer is not correct !!!<span></p>
+  <p>Correct Answer was: <span>"${correctAnswer}"</span></p>
+  <p>Your Answer is: <span>"${value}"</span></p>
+  `;
+  feedBackSelector.append(element);
+  feedBackSelector.removeClass('remove-display');
+  return;
+}
+
+function handleClose(){
+  $('#popup').on('click', '.close', function(){
+    $(this).closest('#popup').addClass('remove-display');
+  });
   return;
 }
 
@@ -221,7 +249,9 @@ function handleSubmit() {
       return;
     }else{
       event.preventDefault();
-      alert('No Value is Selected- Please select a value before Submission')
+      // alert('No Value is Selected- Please select a value before Submission')
+      $('#popup').removeClass('remove-display');
+      handleClose();
       return;
     }
   });
@@ -231,6 +261,9 @@ function handleSubmit() {
 function handleNext() {
   $('.js-form').on('click', '.js-next', function(){
     let fieldset = $(this).closest('fieldset');
+    let feedBackSelector = $('.js-feed-back');
+    feedBackSelector.addClass('remove-display');
+    removeFeedbackView();
     fieldset.find('legend').remove();
     fieldset.find('p').remove();
     if(quizQuestions[pickQuestion]){

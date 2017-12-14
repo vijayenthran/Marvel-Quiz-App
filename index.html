@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <!-- Responsive viewport tag, tells small screens that it's responsive -->
@@ -10,11 +10,11 @@
   <link href="https://fonts.googleapis.com/css?family=Allan|Bungee|Faster+One|Holtwood+One+SC|Permanent+Marker|Racing+Sans+One" rel="stylesheet">
 </head>
 <body>
-  <main class='container js-container' role='main'>
-    <section class='quiz-Start js-quiz-Start align-block' role='region'>
+  <main class='container js-container'>
+    <section class='quiz-Start js-quiz-Start align-block'>
       <header role='banner'><h1>Marvel Quiz</h1></header>
-      <article class='instructions js-instructions' role='article'>
-        <div class='image'>
+      <article class='instructions js-instructions'>
+        <div class='image' role='presentation'>
           <img src='https://cdn-ssl.img.shop.marvel.com/content/ds/skyway/2014/category/full/fwb_Avengers_20140422.png' alt='All Avengers hero Cartoonic Picture, Heros are showing their Cool Moves in the picture'>
         </div>
         <h2>Instructions</h2>
@@ -27,15 +27,24 @@
           <li>Click "Start Quiz" below to Begin quiz.</li>
         </ol>
       </article>
-      <div class='start-Quiz'>
+      <div class='start-Quiz' role='button'>
         <input type="button" value="start-Quiz" class='start-Quiz-Button js-start-Quiz-Button'>
       </div>
     </section>
-    <form class='form js-form' role='form'>
+    <section id='popup' class='popup-back remove-display'>
+      <div class='popup-content'>
+        <div class='close'>&times;</div>
+        <p>Please, Select an option Before Submission</p>
+        <p>Click on "&times;" icon to close this window</p>
+      </div>
+    </section>
+    <section class='align-block remove-display feed-back js-feed-back'>
+    </section>
+    <form class='form js-form'>
       <fieldset></fieldset>
     </form> 
-    <section class='score js-score remove-display align-block' role='region'></section>
-    <section class='show-Result js-show-Result remove-display' role='region'></section>
+    <section class='score js-score remove-display align-block'></section>
+    <section class='show-Result js-show-Result remove-display'></section>
   </main>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script src="index.js"></script>

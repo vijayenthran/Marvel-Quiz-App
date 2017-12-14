@@ -11,7 +11,7 @@ body{
 }
 
 .image{
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .image img {
@@ -83,7 +83,7 @@ h1 {
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  border :2px solid black;
+  border :3px solid black;
   box-shadow: 10px 10px 5px #888888;
   padding: 5px;
 }
@@ -92,6 +92,9 @@ h1 {
   display: none;
 }
 
+.block{
+  display:block;
+}
 
 .show-Result {
   text-align: center;
@@ -120,7 +123,7 @@ h1 {
   border :2px solid red;
   border-radius:3px;
 }
-
+/*todo*/
 .submit, .next {
   font-family: 'Bungee', cursive;
   cursor: pointer;
@@ -144,4 +147,59 @@ h1 {
   font-family: 'Holtwood One SC', serif;
   margin-right: 30px;
   text-align: center;
+}
+
+.feed-back{
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Allan', cursive;
+  font-size:1.3em;
+}
+
+.feed-back p span{
+  font-weight: bold;
+  font-size:1.4em;
+}
+
+.popup-back {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 250px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.popup-content {
+  border-radius :10px;
+  position : relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+}
+
+.close {  
+  float: right;
+  color: #aaaaaa;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup-content{
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: 'Allan', cursive;
+}
+
+.popup-content p{
+ clear:right;
 }
