@@ -279,20 +279,20 @@ function handleNext() {
 function renderQuestion() {
   const element = 
   `<legend class='formlegend question'>${questionNumber}) ${quizQuestions[pickQuestion].question}</legend>
-  <p class='formInputParagraph' role="radio">
-  <input type="radio" name="option" id="option_1" value="${quizQuestions[pickQuestion].option1}">
+  <p class='formInputParagraph'>
+  <input type="radio" role="radio" name="option" id="option_1" value="${quizQuestions[pickQuestion].option1}">
   <label for="option_1">${quizQuestions[pickQuestion].option1}</label>
   </p>
-  <p class='formInputParagraph' role="radio">
-  <input type="radio" name="option" id="option_2" value="${quizQuestions[pickQuestion].option2}">
+  <p class='formInputParagraph'>
+  <input type="radio" role="radio" name="option" id="option_2" value="${quizQuestions[pickQuestion].option2}">
   <label for="option_2">${quizQuestions[pickQuestion].option2}</label>
   </p>
-  <p class='formInputParagraph' role="radio">
-  <input type="radio" name="option" id="option_3" value="${quizQuestions[pickQuestion].option3}">
+  <p class='formInputParagraph'>
+  <input type="radio" role="radio" name="option" id="option_3" value="${quizQuestions[pickQuestion].option3}">
   <label for="option_3">${quizQuestions[pickQuestion].option3}</label>
   </p>
-  <p class='formInputParagraph' role="radio">
-  <input type="radio" name="option" id="option_4" value="${quizQuestions[pickQuestion].option4}">
+  <p class='formInputParagraph'>
+  <input type="radio" role="radio" name="option" id="option_4" value="${quizQuestions[pickQuestion].option4}">
   <label for="option_4">${quizQuestions[pickQuestion].option4}</label>
   </p>
   <p class='formInputParagraph'>
