@@ -280,19 +280,19 @@ function renderQuestion() {
   const element = 
   `<legend class='formlegend question'>${questionNumber}) ${quizQuestions[pickQuestion].question}</legend>
   <p class='formInputParagraph'>
-  <input type="radio" name="option" id="option_1" value="${quizQuestions[pickQuestion].option1}">
+  <input type="radio" name="option" role="radio" id="option_1" value="${quizQuestions[pickQuestion].option1}">
   <label for="option_1">${quizQuestions[pickQuestion].option1}</label>
   </p>
   <p class='formInputParagraph'>
-  <input type="radio" name="option" id="option_2" value="${quizQuestions[pickQuestion].option2}">
+  <input type="radio" name="option" role="radio" id="option_2" value="${quizQuestions[pickQuestion].option2}">
   <label for="option_2">${quizQuestions[pickQuestion].option2}</label>
   </p>
   <p class='formInputParagraph'>
-  <input type="radio" name="option" id="option_3" value="${quizQuestions[pickQuestion].option3}">
+  <input type="radio" name="option" role="radio" id="option_3" value="${quizQuestions[pickQuestion].option3}">
   <label for="option_3">${quizQuestions[pickQuestion].option3}</label>
   </p>
   <p class='formInputParagraph'>
-  <input type="radio" name="option" id="option_4" value="${quizQuestions[pickQuestion].option4}">
+  <input type="radio" name="option" role="radio" id="option_4" value="${quizQuestions[pickQuestion].option4}">
   <label for="option_4">${quizQuestions[pickQuestion].option4}</label>
   </p>
   <p class='formInputParagraph'>
